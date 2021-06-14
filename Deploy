@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# Run npm only if package.json changed
+old_sum=$(cat Deploy.cache)
+new_sum=$(md5sum package.json)
+if [ "$old_sum" != "$new_sum" ]; then
+    npm install
+    echo -n "$new_sum" > Deploy.cache
+fi
+
 # Build the react app
 npm run build
 

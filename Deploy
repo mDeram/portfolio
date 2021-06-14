@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Build the react app
+npm run build
+
+# Restart the server
+pm2 reload portfolio

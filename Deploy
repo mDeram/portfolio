@@ -9,4 +9,4 @@ if [ "$old_sum" != "$new_sum" ]; then
 fi
 
 # Build the react app
-npm run build && mv build/ portfolio/ && echo "Deployed"
+npm run build && rm -r portfolio/ && mv build/ portfolio/ && echo "Deployed"

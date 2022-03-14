@@ -1,5 +1,5 @@
-@import-normalize;
 @import './project.css';
+@import './presentation.css';
 
 html, body {
     padding: 0px;
@@ -8,4 +8,14 @@ html, body {
 
 * {
     box-sizing: border-box;
+}
+
+.scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+    scroll-snap-align: start;
 }

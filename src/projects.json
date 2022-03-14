@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Sudoku",
+        "description": "A multiplayer sudoku game",
+        "stack": ["typescript", "react", "nodejs", "websocket"],
+        "demo": "https://mderam.com/sudoku",
+        "github": {
+            "backend": "https://github.com/mDeram/sudoku-backend",
+            "frontend": "https://github.com/mDeram/sudoku-frontend"
+        }
+    },
+    {
+        "name": "2D Map Editor",
+        "description": "Simple 2D map editor",
+        "stack": ["lua", "love2D"],
+        "demo": "https://mathurin.itch.io/2d-map-editor",
+        "github": {
+            "github": "https://github.com/mDeram/2DMapEditor"
+        }
+    },
+    {
+        "name": "Blog",
+        "description": "My personal blog, with an online article editor",
+        "stack": ["typescript", "react", "nodejs", "graphql", "urql", "nextjs"],
+        "demo": "https://mderam.com/blog",
+        "github": {
+            "backend": "https://github.com/mDeram/blog-backend",
+            "frontend": "https://github.com/mDeram/blog-frontend"
+        }
+    },
+    {
+        "name": "Surf Forecast",
+        "description": "A part of a group project done for \"la nuit de l'info\"",
+        "stack": ["nodejs", "javascript", "REST API"],
+        "demo": "https://mderam.com/surf-forecast",
+        "github": {
+            "github": "https://github.com/mDeram/surf-forecast"
+        }
+    }
+]

@@ -1,5 +1,5 @@
-import Project from "./Project.js";
-import Presentation from "./Presentation.js";
+import Project from "./Project.jsx";
+import Presentation from "./Presentation.jsx";
 import "../css/app.css";
 import projects from "../projects.json";
 

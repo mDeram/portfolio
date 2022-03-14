@@ -42,10 +42,10 @@ const projects = [
         github: "https://github.com/mDeram/Luagon",
     },
     {
-        name: "B",
-        description: "description",
-        stack: ["r"],
-        github: "https://github.com/mDeram/kekos",
+        name: "Blog",
+        description: "My personal blog, with an online article editor",
+        stack: ["typescript", "react", "nodejs", "graphql", "urql", "nextjs"],
+        github: "https://github.com/mDeram/blog-backend",
     }
 ]
 

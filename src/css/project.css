@@ -15,14 +15,6 @@
     -webkit-background-size: cover;
 }
 
-.luagon {
-	background-image: url("../img/luagon_bg.png");
-}
-
-.blog {
-	background-image: url("../img/blog_bg.png");
-}
-
 .content {
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, 0.4);

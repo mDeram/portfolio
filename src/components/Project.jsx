@@ -5,7 +5,8 @@ export default function Project(props) {
         description,
         stack,
         demo,
-        github
+        github,
+        background
     } = props;
 
     function drawGithub(name, url) {
@@ -22,8 +23,7 @@ export default function Project(props) {
 
     return (
         <div className="project">
-            <div className={`background ${nameLower}`}>
-            </div>
+            <div className="background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/${background})` }}></div>
             <div className="content">
                 <div className="text-container">
                     <h2>{name}</h2>

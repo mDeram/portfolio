@@ -1,6 +1,7 @@
 [
     {
         "name": "Sudoku",
+        "background": "sudoku.png",
         "description": "A multiplayer sudoku game",
         "stack": ["typescript", "react", "nodejs", "websocket"],
         "demo": "https://mderam.com/sudoku",
@@ -11,6 +12,7 @@
     },
     {
         "name": "2D Map Editor",
+        "background": "2d_map_editor.png",
         "description": "Simple 2D map editor",
         "stack": ["lua", "love2D"],
         "demo": "https://mathurin.itch.io/2d-map-editor",
@@ -20,6 +22,7 @@
     },
     {
         "name": "Blog",
+        "background": "blog.png",
         "description": "My personal blog, with an online article editor",
         "stack": ["typescript", "react", "nodejs", "graphql", "urql", "nextjs"],
         "demo": "https://mderam.com/blog",
@@ -30,6 +33,7 @@
     },
     {
         "name": "Surf Forecast",
+        "background": "surf_forecast.png",
         "description": "A part of a group project done for \"la nuit de l'info\"",
         "stack": ["nodejs", "javascript", "REST API"],
         "demo": "https://mderam.com/surf-forecast",

@@ -1,12 +1,9 @@
 #!/bin/sh
 
-# Run npm only if package.json changed
-old_sum=$(cat Deploy.cache)
-new_sum=$(md5sum package-lock.json)
 if [ "$old_sum" != "$new_sum" ]; then
-    npm ci --production=false
+    pnpm install
     echo -n "$new_sum" > Deploy.cache
 fi
 
 # Build the react app
-npm run build && rm -r portfolio/ && mv build/ portfolio/ && echo "Deployed"
+pnpm run build && rm -r portfolio/ && mv build/ portfolio/ && echo "Deployed"

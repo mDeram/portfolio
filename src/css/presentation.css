@@ -11,3 +11,7 @@
     position: absolute;
     font-size: 2rem;
 }
+
+.bgLeft {
+    background-position: left top;
+}

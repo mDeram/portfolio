@@ -10,7 +10,7 @@ export default function Project(props) {
     } = props;
 
     function drawGithub(name, url) {
-        return <a key={name} href={url}>{name}</a>;
+        return <a key={name} href={url} target="_blank">{name}</a>;
     }
 
     function renderGithub() {
@@ -29,14 +29,8 @@ export default function Project(props) {
                     <h2>{name}</h2>
                     <p>{description}</p>
                     <p>{stack.join(" | ")}</p>
-                    {demo && <a href={demo}>demo</a>}
+                    {demo && <a href={demo} target="_blank">demo</a>}
                     {renderGithub()}
-                </div>
-                <div className="demo-container">
-                    <img
-                        alt={`${name} demo`}
-                        src={`${process.env.PUBLIC_URL}/img/${nameLower}_demo.gif`}
-                    />
                 </div>
             </div>
         </div>

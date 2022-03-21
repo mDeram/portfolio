@@ -28,12 +28,7 @@
 }
 
 .content div {
-    width: 50%;
-}
-
-.content img {
     width: 100%;
-    height: auto;
 }
 
 .content .text-container {
@@ -41,8 +36,8 @@
     text-align: center;
 }
 
-.content .demo-container {
-
+.text-container > a {
+    margin: 10px;
 }
 
 .background {

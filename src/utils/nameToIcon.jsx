@@ -1,4 +1,14 @@
-import { SiTypescript, SiReact, SiNodedotjs, SiNextdotjs, SiJavascript, SiSocketdotio, SiGraphql, SiLua} from "react-icons/si";
+import {
+    SiTypescript,
+    SiReact,
+    SiNodedotjs,
+    SiNextdotjs,
+    SiJavascript,
+    SiSocketdotio,
+    SiGraphql,
+    SiLua,
+    SiRedis
+} from "react-icons/si";
 
 const iconMap = {
     "typescript": <SiTypescript title="typescript" />,
@@ -9,6 +19,7 @@ const iconMap = {
     "socketio": <SiSocketdotio title="socket.io" />,
     "graphql": <SiGraphql title="graphql" />,
     "lua": <SiLua title="lua" />,
+    "redis": <SiRedis title="redis" />,
 }
 
 function getIcon(name) {

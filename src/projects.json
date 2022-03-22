@@ -3,7 +3,7 @@
         "name": "Multiplayer Sudoku",
         "background": "sudoku.png",
         "description": "A multiplayer sudoku game.",
-        "stack": ["typescript", "react", "nodejs", "socketio"],
+        "stack": ["typescript", "react", "nodejs", "socketio", "redis"],
         "demo": "https://mderam.com/sudoku",
         "repo": {
             "Backend": "https://github.com/mDeram/sudoku-backend",

@@ -9,9 +9,19 @@
     text-align: center;
     color: white;
     position: absolute;
-    font-size: 2rem;
+}
+
+.presentation h1 {
+    font-size: 4rem;
+    margin: 1rem;
 }
 
 .bgLeft {
     background-position: left top;
+}
+
+@media only screen and (max-width: 768px) {
+    .presentation h1 {
+        font-size: 1.5rem;
+    }
 }

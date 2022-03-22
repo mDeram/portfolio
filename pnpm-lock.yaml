@@ -6,6 +6,7 @@ specifiers:
   '@testing-library/user-event': ^13.5.0
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-icons: ^4.3.1
   react-scripts: 5.0.0
   web-vitals: ^2.1.4
 
@@ -15,6 +16,7 @@ dependencies:
   '@testing-library/user-event': 13.5.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-icons: 4.3.1_react@17.0.2
   react-scripts: 5.0.0_react@17.0.2
   web-vitals: 2.1.4
 
@@ -7744,6 +7746,14 @@ packages:
 
   /react-error-overlay/6.0.10:
     resolution: {integrity: sha512-mKR90fX7Pm5seCOfz8q9F+66VCc1PGsWSBxKbITjfKVQHMNF2zudxHnMdJiB1fRCb+XsbQV9sO9DCkgsMQgBIA==}
+    dev: false
+
+  /react-icons/4.3.1_react@17.0.2:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:

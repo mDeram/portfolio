@@ -1,44 +1,44 @@
 [
     {
-        "name": "Sudoku",
+        "name": "Multiplayer Sudoku",
         "background": "sudoku.png",
-        "description": "A multiplayer sudoku game",
-        "stack": ["typescript", "react", "nodejs", "websocket"],
+        "description": "A multiplayer sudoku game.",
+        "stack": ["typescript", "react", "nodejs", "socketio"],
         "demo": "https://mderam.com/sudoku",
-        "github": {
-            "backend": "https://github.com/mDeram/sudoku-backend",
-            "frontend": "https://github.com/mDeram/sudoku-frontend"
+        "repo": {
+            "Backend": "https://github.com/mDeram/sudoku-backend",
+            "Frontend": "https://github.com/mDeram/sudoku-frontend"
         }
     },
     {
         "name": "2D Map Editor",
         "background": "2d_map_editor.png",
-        "description": "Simple 2D map editor",
-        "stack": ["lua", "love2D"],
+        "description": "Simple 2D map editor.",
+        "stack": ["lua", "Love2D"],
         "demo": "https://mathurin.itch.io/2d-map-editor",
-        "github": {
-            "github": "https://github.com/mDeram/2DMapEditor"
+        "repo": {
+            "Github": "https://github.com/mDeram/2DMapEditor"
         }
     },
     {
         "name": "Blog",
         "background": "blog.png",
-        "description": "My personal blog, with an online article editor",
-        "stack": ["typescript", "react", "nodejs", "graphql", "urql", "nextjs"],
+        "description": "My personal blog, with an online article editor.",
+        "stack": ["typescript", "react", "nodejs", "graphql", "Urql", "nextjs"],
         "demo": "https://mderam.com/blog",
-        "github": {
-            "backend": "https://github.com/mDeram/blog-backend",
-            "frontend": "https://github.com/mDeram/blog-frontend"
+        "repo": {
+            "Backend": "https://github.com/mDeram/blog-backend",
+            "Frontend": "https://github.com/mDeram/blog-frontend"
         }
     },
     {
         "name": "Surf Forecast",
         "background": "surf_forecast.png",
-        "description": "A part of a group project done for \"la nuit de l'info\"",
-        "stack": ["nodejs", "javascript", "REST API"],
+        "description": "Part of a group project realized for \"la nuit de l'info\".",
+        "stack": ["nodejs", "javascript", "RestAPI"],
         "demo": "https://mderam.com/surf-forecast",
-        "github": {
-            "github": "https://github.com/mDeram/surf-forecast"
+        "repo": {
+            "Github": "https://github.com/mDeram/surf-forecast"
         }
     }
 ]

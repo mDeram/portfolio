@@ -1,22 +1,32 @@
+import getIcon from "../utils/nameToIcon.jsx";
+
 export default function Project(props) {
     const {
         name,
-        nameLower = name.toLowerCase(),
         description,
         stack,
         demo,
-        github,
+        repo,
         background
     } = props;
 
-    function drawGithub(name, url) {
+    function renderStack() {
+        return stack.map(name => {
+            let icon = getIcon(name);
+            if (!icon)
+                return name;
+            return icon;
+        }).map(element => <li>{element}</li>);
+    }
+
+    function renderRepoLink(name, url) {
         return <a key={name} href={url} target="_blank">{name}</a>;
     }
 
-    function renderGithub() {
+    function renderRepo() {
         const result = [];
-        for (const [name, url] of Object.entries(github)) {
-            result.push(drawGithub(name, url));
+        for (const [name, url] of Object.entries(repo)) {
+            result.push(renderRepoLink(name, url));
         }
         return result;
     }
@@ -28,9 +38,11 @@ export default function Project(props) {
                 <div className="text-container">
                     <h2>{name}</h2>
                     <p>{description}</p>
-                    <p>{stack.join(" | ")}</p>
-                    {demo && <a href={demo} target="_blank">demo</a>}
-                    {renderGithub()}
+                    <ul className="stack">{renderStack()}</ul>
+                    <div className="links">
+                        {demo && <a href={demo} target="_blank">Demo</a>}
+                        {renderRepo()}
+                    </div>
                 </div>
             </div>
         </div>

@@ -11,12 +11,7 @@ export default function Project(props) {
     } = props;
 
     function renderStack() {
-        return stack.map(name => {
-            let icon = getIcon(name);
-            if (!icon)
-                return name;
-            return icon;
-        }).map(element => <li>{element}</li>);
+        return stack.map(name => <li key={name}>{getIcon(name) || name}</li>)
     }
 
     function renderRepoLink(name, url) {

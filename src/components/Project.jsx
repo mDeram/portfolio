@@ -20,7 +20,7 @@ export default function Project(props) {
     }
 
     function renderRepoLink(name, url) {
-        return <a key={name} href={url} target="_blank">{name}</a>;
+        return <a key={name} href={url} target="_blank" rel="noreferrer">{name}</a>;
     }
 
     function renderRepo() {
@@ -40,7 +40,7 @@ export default function Project(props) {
                     <p>{description}</p>
                     <ul className="stack">{renderStack()}</ul>
                     <div className="links">
-                        {demo && <a href={demo} target="_blank">Demo</a>}
+                        {demo && <a href={demo} target="_blank" rel="noreferrer">Demo</a>}
                         {renderRepo()}
                     </div>
                 </div>

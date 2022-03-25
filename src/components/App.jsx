@@ -1,5 +1,6 @@
 import Project from "./Project.jsx";
 import Presentation from "./Presentation.jsx";
+import Contact from "./Contact.jsx";
 import "../css/app.css";
 import projects from "../projects.json";
 
@@ -16,10 +17,13 @@ function App() {
     }
 
     return (
+        <>
+        <Contact />
         <div className="scroller">
             <Presentation />
             {drawProjects(projects)}
         </div>
+        </>
     );
 }
 

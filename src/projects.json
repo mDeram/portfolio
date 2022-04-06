@@ -24,7 +24,7 @@
         "name": "Blog",
         "background": "blog.png",
         "description": "My personal blog, with an online article editor.",
-        "stack": ["typescript", "react", "nodejs", "graphql", "Urql", "nextjs"],
+        "stack": ["typescript", "react", "nodejs", "graphql", "nextjs", "postgres", "Urql"],
         "demo": "https://mderam.com/blog",
         "repo": {
             "Backend": "https://github.com/mDeram/blog-backend",

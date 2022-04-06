@@ -7,7 +7,8 @@ import {
     SiSocketdotio,
     SiGraphql,
     SiLua,
-    SiRedis
+    SiRedis,
+    SiPostgresql
 } from "react-icons/si";
 
 const iconMap = {
@@ -20,6 +21,7 @@ const iconMap = {
     "graphql": <SiGraphql title="graphql" />,
     "lua": <SiLua title="lua" />,
     "redis": <SiRedis title="redis" />,
+    "postgres": <SiPostgresql title="postgresql" />,
 }
 
 function getIcon(name) {

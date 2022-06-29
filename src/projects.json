@@ -1,43 +1,54 @@
 [
     {
+        "name": "Drive",
+        "images": ["2d_map_editor.png", "blog.png"],
+        "description": "Drive web application. Upload files to the cloud and download them on any device.",
+        "stack": ["typescript", "react", "nodejs", "postgres", "redis", "graphql", "nextjs"],
+        "links": {
+            "Demo": "https://drive.mderam.com",
+            "Backend": "https://github.com/mDeram/cloud-backend",
+            "Frontend": "https://github.com/mDeram/cloud-frontend"
+        }
+    },
+    {
         "name": "Multiplayer Sudoku",
-        "background": "sudoku.png",
-        "description": "A multiplayer sudoku game.",
+        "images": ["sudoku.png", "2d_map_editor.png", "blog.png"],
+        "description": "An awesome multiplayer sudoku game using websockets.",
         "stack": ["typescript", "react", "nodejs", "socketio", "redis"],
-        "demo": "https://mderam.com/sudoku",
-        "repo": {
+        "links": {
+            "Demo": "https://mderam.com/sudoku",
             "Backend": "https://github.com/mDeram/sudoku-backend",
             "Frontend": "https://github.com/mDeram/sudoku-frontend"
         }
     },
     {
         "name": "2D Map Editor",
-        "background": "2d_map_editor.png",
-        "description": "Simple 2D map editor.",
+        "images": ["2d_map_editor.png"],
+        "description": "2D map editor, design a map and export it to json.",
         "stack": ["lua", "Love2D"],
-        "demo": "https://mathurin.itch.io/2d-map-editor",
-        "repo": {
+        "links": {
+            "Demo": "https://mathurin.itch.io/2d-map-editor",
             "Github": "https://github.com/mDeram/2DMapEditor"
         }
     },
     {
         "name": "Blog",
-        "background": "blog.png",
-        "description": "My personal blog, with an online article editor.",
+        "images": ["blog.png"],
+        "description": "My personal blog, with an online article editor and incremental static pages regeneration.",
         "stack": ["typescript", "react", "nodejs", "graphql", "nextjs", "postgres", "Urql"],
-        "demo": "https://mderam.com/blog",
-        "repo": {
+        "links": {
+            "Demo": "https://mderam.com/blog",
             "Backend": "https://github.com/mDeram/blog-backend",
             "Frontend": "https://github.com/mDeram/blog-frontend"
         }
     },
     {
         "name": "Surf Forecast",
-        "background": "surf_forecast.png",
-        "description": "Part of a group project realized for \"la nuit de l'info\".",
+        "images": ["surf_forecast.png"],
+        "description": "A surf forecasting page made for \"la nuit de l'info\" by me and a team in one night.",
         "stack": ["nodejs", "javascript", "RestAPI"],
-        "demo": "https://mderam.com/surf-forecast",
-        "repo": {
+        "links": {
+            "Demo": "https://mderam.com/surf-forecast",
             "Github": "https://github.com/mDeram/surf-forecast"
         }
     }

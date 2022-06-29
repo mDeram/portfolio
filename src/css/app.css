@@ -1,6 +1,9 @@
 @import './project.css';
-@import './presentation.css';
 @import './contact.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html, body {
     padding: 0px;
@@ -13,12 +16,13 @@ html, body {
     box-sizing: border-box;
 }
 
-.scroller {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-.scroller > div {
-    scroll-snap-align: start;
+.centered-absolute {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

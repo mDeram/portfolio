@@ -1,22 +1,90 @@
-import { SiGithub, SiMaildotru } from "react-icons/si";
-import { IoDocumentText } from "react-icons/io5";
+import axios from "axios";
+import classNames from "classnames";
+import { useEffect } from "react";
+import { useState } from "react";
+import { TbPizza } from "react-icons/tb";
+
+const MESSAGE_SENT = "Message sent! Have a nice day";
+const MESSAGE_ERROR = "Sorry, an error occured, please send me an email directly!";
+
+function getInitValues() {
+    return { email: "", subject: "", message: "" };
+}
 
 function Contact() {
-    function getResumeUrl() {
-        let suffix = "en";
+    const [submitMessage, setSubmitMessage] = useState(null);
+    const [submitting, setSubmitting] = useState(false);
+    const [values, setValues] = useState(getInitValues());
 
-        let language = navigator.language || navigator.userLanguage;
-        if (typeof language === "string" && language.toLowerCase().split("-")[0] === "fr")
-            suffix = "fr";
+    useEffect(() => {
+        if (submitMessage === MESSAGE_SENT) setValues(getInitValues());
+    }, [submitMessage]);
 
-        return `${process.env.PUBLIC_URL}/pdf/cv_deramecourt_mathurin_${suffix}.pdf`;
+    function handleChange(e) {
+        const { name, value } = e.target;
+        setValues(prev => ({ ...prev, [name]: value }));
+    }
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        setSubmitting(true);
+
+        try {
+            await axios.post("https://mderam.com/send-email", {
+                subject: values.subject,
+                content: `From: ${values.email}\nContent: \n\n${values.message}`
+            }, {
+                headers: {
+                    "Email-Server-Name": "portfolio-contact"
+                }
+            });
+
+            setSubmitMessage(MESSAGE_SENT);
+        } catch(e) {
+            setSubmitMessage(MESSAGE_ERROR);
+        }
+
+        setSubmitting(false);
+    }
+
+    function renderInput({ type, forName, name }) {
+        return (
+            <div className="flex flex-col items-start w-full mb-2">
+                <label htmlFor={forName} className="text-neutral-50">{name}</label>
+                {type === "textarea"
+                    ? <textarea required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2" name={forName}/>
+                    : <input required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2" type={type} name={forName}/>
+                }
+            </div>
+        );
     }
 
     return (
-        <div className="contact">
-            <a className="email" href="mailto:contact@mderam.com"><SiMaildotru title="Send Email"/></a>
-            <a className="github" href="https://github.com/mDeram" target="_blank" rel="noreferrer"><SiGithub title="Open Github"/></a>
-            <a className="resume" href={getResumeUrl()} target="_blank" rel="noreferrer"><IoDocumentText title="Download Resume"/></a>
+        <div className="project">
+            <div className="h-screen background bg-left-top bg-fixed bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/presentation.png)` }}></div>
+            <div className="centered-absolute">
+                <form className="w-full max-w-screen-sm" onSubmit={handleSubmit}>
+                    <div className="flex justify-between">
+                        {renderInput({type: "email", name: "Email", forName: "email"})}
+                        <span className="w-8"/>
+                        {renderInput({type: "text", name: "Subject", forName: "subject"})}
+                    </div>
+                    {renderInput({type: "textarea", name: "Message", forName: "message"})}
+
+                    <div className="flex items-center justify-between">
+                        <button className={classNames(`flex justify-center
+                            items-center w-20 h-10 text-base px-4 py-2
+                            bg-neutral-50 text-neutral-800 mt-2
+                            hover:bg-neutral-200`, {
+                            "disabled:bg-neutral-200": submitting
+                        })} type="submit">
+                            {false ? <TbPizza className="animate-spin text-lg"/> : "Send"}
+                        </button>
+                        {submitMessage && <p className="text-neutral-50">{submitMessage}</p>}
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }

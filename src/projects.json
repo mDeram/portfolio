@@ -45,7 +45,7 @@
     {
         "name": "Surf Forecast",
         "images": ["surf_forecast.png"],
-        "description": "A surf forecasting page made for \"la nuit de l'info\" by me and a team in one night.",
+        "description": "A surf forecasting page made for \"la nuit de l'info\" by our team of students in one night.",
         "stack": ["nodejs", "javascript", "RestAPI"],
         "links": {
             "Demo": "https://mderam.com/surf-forecast",

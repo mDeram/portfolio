@@ -61,7 +61,7 @@ function Contact() {
     }
 
     return (
-        <div className="project">
+        <div className="contact-root project bg-black">
             <div className="h-screen background bg-left-top bg-fixed bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/presentation.png)` }}></div>
             <div className="centered-absolute">
                 <form className="w-full max-w-screen-sm" onSubmit={handleSubmit}>

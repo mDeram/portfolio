@@ -4,15 +4,19 @@ import SmallContact from "./SmallContact.jsx";
 import Contact from "./Contact.jsx";
 import "../css/app.css";
 
-function App() {
+const TEST = "b"; //"a" | "b"
+export function useTest(a, b) {
+    return TEST === "a" ? a : b;
+}
 
+function App() {
     return (
-        <>
-        <SmallContact />
-        <Presentation />
-        <ProjectList />
-        <Contact />
-        </>
+        <div>
+            <SmallContact />
+            <Presentation />
+            <ProjectList />
+            <Contact />
+        </div>
     );
 }
 

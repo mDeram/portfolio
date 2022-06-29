@@ -4,6 +4,7 @@ import getIcon from "../utils/nameToIcon.jsx";
 import LinkButton from "./LinkButton";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { useTest } from "./App";
 
 function Arrow({ children, handleClick, pos }) {
     return (
@@ -44,18 +45,20 @@ function ImageSlider({ images }) {
         return (
             <div className="absolute flex justify-center w-full bottom-1 text-neutral-50 text-[0.5rem]">
                 {images.map((_, i) => {
-                    if (pos === i) return <FaCircle className="m-1"/>
-                    return <FaRegCircle className="m-1 hover:cursor-pointer" onClick={() => setPos(i)}/>
+                    if (pos === i) return <FaCircle key={i} className="m-1"/>
+                    return <FaRegCircle key={i} className="m-1 hover:cursor-pointer" onClick={() => setPos(i)}/>
                 })}
             </div>
         );
     }
 
     return (
-        <div className="h-full w-full relative shadow-xl overflow-hidden rounded-lg border-4 border-black/20">
-        {/*<div className="h-full w-full relative shadow-lg overflow-hidden rounded-lg border-2 border-neutral-50">*/}
+        <div className={useTest(
+            "h-full w-full relative shadow-xl overflow-hidden rounded-lg border-4 border-black/20",
+           "h-full w-full relative shadow-lg overflow-hidden rounded-lg border-2 border-neutral-50"
+        )}>
             {images.map((image, i) => (
-                <img
+                <img key={image}
                     className={classNames("absolute w-full h-full object-cover transition-opacity", {
                         "opacity-0": pos !== i
                     })}
@@ -87,7 +90,7 @@ function Project({
     }
 
     return (
-        <div className="box-content h-80 flex items-center w-full max-w-screen-lg py-20 px-10 text-neutral-50 even:flex-row-reverse border-b last:border-none">
+        <div className="box-content h-80 flex items-center w-full max-w-screen-lg py-20 px-10 text-neutral-50 odd:flex-row-reverse border-b last:border-none">
             <div className="h-56 w-full px-8 flex flex-col items-start justify-between">
                 <h2 className="text-3xl font-semibold">{name}</h2>
                 <p>{description}</p>

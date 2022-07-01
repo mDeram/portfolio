@@ -1,13 +1,13 @@
 import classNames from "classnames";
-import { useTest } from "./App";
+import { useTest } from "../utils/useTest";
 
 function LinkButton({ name, url }) {
     return (
         <a href={url} target="_blank" rel="noreferrer"
             className={classNames(
-                "px-8 py-4 rounded-md no-underline font-semibold",
+                "px-6 py-3 rounded-md no-underline font-semibold",
                 useTest(
-                    "bg-black/20 hover:bg-black/30",
+                    "bg-black/20 hover:bg-black/30 shadow-lg",
                     "bg-neutral-50 text-black mix-blend-screen hover:bg-neutral-200"
                 )
             )}

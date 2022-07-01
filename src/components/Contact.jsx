@@ -51,7 +51,7 @@ function Contact() {
     function renderInput({ type, forName, name }) {
         return (
             <div className="flex flex-col items-start w-full mb-2">
-                <label htmlFor={forName} className="text-neutral-50">{name}</label>
+                <label htmlFor={forName} className="text-neutral-50 font-semibold">{name}</label>
                 {type === "textarea"
                     ? <textarea required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2" name={forName}/>
                     : <input required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2" type={type} name={forName}/>
@@ -61,13 +61,12 @@ function Contact() {
     }
 
     return (
-        <div className="contact-root project bg-black">
+        <div className="project bg-black">
             <div className="h-screen background bg-left-top bg-fixed bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/presentation.png)` }}></div>
             <div className="centered-absolute">
-                <form className="w-full max-w-screen-sm" onSubmit={handleSubmit}>
-                    <div className="flex justify-between">
+                <form className="w-full max-w-screen-xs md:max-w-screen-sm" onSubmit={handleSubmit}>
+                    <div className="flex flex-col md:flex-row md:gap-6">
                         {renderInput({type: "email", name: "Email", forName: "email"})}
-                        <span className="w-8"/>
                         {renderInput({type: "text", name: "Subject", forName: "subject"})}
                     </div>
                     {renderInput({type: "textarea", name: "Message", forName: "message"})}
@@ -75,7 +74,7 @@ function Contact() {
                     <div className="flex items-center justify-between">
                         <button className={classNames(`flex justify-center
                             items-center w-20 h-10 text-base px-4 py-2
-                            bg-neutral-50 text-neutral-800 mt-2
+                            bg-neutral-50 text-neutral-800 mt-2 font-semibold
                             hover:bg-neutral-200`, {
                             "disabled:bg-neutral-200": submitting
                         })} type="submit">

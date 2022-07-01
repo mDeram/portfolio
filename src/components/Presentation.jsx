@@ -1,6 +1,6 @@
 function Presentation() {
     return (
-        <div className="project bg-black presentation-root">
+        <div className="project bg-black">
             <div className="background bg-left-top bg-fixed bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/presentation.png)` }}></div>
             {/* text-center ? */}
             <div className="centered-absolute">

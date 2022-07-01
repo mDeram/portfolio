@@ -5,8 +5,8 @@ function ProjectList() {
     return (
         <section className="relative flex flex-col items-center">
             <div className={`
-                bg-scroll -z-20 bottom-0 h-screen w-screen
-                bg-gradient-to-b from-emerald-400 to-purple-400 fixed
+                fixed -z-10 top-0 h-screen w-screen
+                bg-gradient-to-b from-emerald-400 to-purple-400
             `}></div>
             {projects.map(project => (
                 <Project

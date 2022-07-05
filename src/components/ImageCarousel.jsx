@@ -29,10 +29,10 @@ function ImageCarousel({ images }) {
 
         return (<>
             <Arrow handleClick={() => slide(-1)}>
-                <AiFillCaretLeft/>
+                <AiFillCaretLeft className="mix-blend-difference"/>
             </Arrow>
             <Arrow handleClick={() => slide(1)} pos="right">
-                <AiFillCaretRight/>
+                <AiFillCaretRight className="mix-blend-difference"/>
             </Arrow>
         </>);
     }
@@ -41,7 +41,7 @@ function ImageCarousel({ images }) {
         if (images.length === 1) return;
 
         return (
-            <div className="absolute flex justify-center w-full bottom-1 text-neutral-50 text-[0.5rem]">
+            <div className="absolute flex justify-center w-full bottom-1 text-neutral-50 mix-blend-difference text-[0.5rem]">
                 {images.map((_, i) => {
                     if (pos === i) return <FaCircle key={i} className="m-1"/>
                     return <FaRegCircle key={i} className="m-1 hover:cursor-pointer" onClick={() => setPos(i)}/>

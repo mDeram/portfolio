@@ -53,8 +53,8 @@ function Contact() {
             <div className="flex flex-col items-start w-full mb-2">
                 <label htmlFor={forName} className="text-neutral-50 font-semibold">{name}</label>
                 {type === "textarea"
-                    ? <textarea required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2" name={forName}/>
-                    : <input required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2" type={type} name={forName}/>
+                    ? <textarea required value={values[forName]} onChange={handleChange} className="h-32 md:h-64 w-full text-neutral-800 p-2 rounded-md" name={forName}/>
+                    : <input required value={values[forName]} onChange={handleChange} className="w-full text-neutral-800 p-2 rounded-md" type={type} name={forName}/>
                 }
             </div>
         );
@@ -75,7 +75,7 @@ function Contact() {
                         <button className={classNames(`flex justify-center
                             items-center w-20 h-10 text-base px-4 py-2
                             bg-neutral-50 text-neutral-800 mt-2 font-semibold
-                            hover:bg-neutral-200`, {
+                            hover:bg-neutral-200 rounded-md`, {
                             "disabled:bg-neutral-200": submitting
                         })} type="submit">
                             {false ? <TbPizza className="animate-spin text-lg"/> : "Send"}

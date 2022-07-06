@@ -64,7 +64,7 @@ function Contact() {
         <div className="project bg-black">
             <div className="h-screen background bg-left-top bg-fixed bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/presentation.png)` }}></div>
             <div className="centered-absolute">
-                <form className="w-full max-w-screen-xs md:max-w-screen-sm" onSubmit={handleSubmit}>
+                <form className="w-9/12 md:w-full max-w-screen-xs md:max-w-screen-sm" onSubmit={handleSubmit}>
                     <div className="flex flex-col md:flex-row md:gap-6">
                         {renderInput({type: "email", name: "Email", forName: "email"})}
                         {renderInput({type: "text", name: "Subject", forName: "subject"})}

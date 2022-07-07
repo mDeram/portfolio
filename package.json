@@ -18,10 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "updateCVFr": "mv \"$HOME/Downloads/cv fr.pdf\" ./public/pdf/cv_deramecourt_mathurin_fr.pdf",
-    "updateCVEn": "mv \"$HOME/Downloads/cv en.pdf\" ./public/pdf/cv_deramecourt_mathurin_en.pdf",
-    "updateCV": "npm run updateCVFr; npm run updateCVEn"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

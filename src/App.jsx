@@ -4,6 +4,7 @@ import { SiGithub, SiMaildotru } from "react-icons/si";
 // TODO animate when things appear
 // TODO make background static?
 // TODO superset defaults (like text selection)
+// TODO make it work on /portfolio using vite "page" setting
 
 function Project({ src, title, href, content }) {
     return (

@@ -75,13 +75,13 @@ function App() {
             <section className="mt-16">
                 <h2 className="text-xl text-neutral-900 font-medium mb-8 underline decoration-2 decoration-purple-500">Projects</h2>
                 <div className="flex flex-col gap-16">
-                    <Project title="Drive" src="./portfolio/img/drive_index.png" href="https://github.com/mDeram/cloud-frontend" content={
+                    <Project title="Drive" src="./img/drive_index.png" href="https://github.com/mDeram/cloud-frontend" content={
                         <p>Upload, store and download files from everywhere with an internet connection.</p>
                     } />
-                    <Project title="Multiplayer Sudoku" src="./portfolio/img/sudoku.png" href="https://github.com/mDeram/sudoku-frontend" content={
+                    <Project title="Multiplayer Sudoku" src="./img/sudoku.png" href="https://github.com/mDeram/sudoku-frontend" content={
                         <p>Choose difficulty, share a link with one or more friends and as soon as they join the game start. You colaboratively solving a sudoku.</p>
                     } />
-                    <Project title="2D Map Editor" src="./portfolio/img/2d_map_editor.png" href="https://github.com/mDeram/2DMapEditor" content={
+                    <Project title="2D Map Editor" src="./img/2d_map_editor.png" href="https://github.com/mDeram/2DMapEditor" content={
                         <p>A simple map editor to help game developers with their map building.</p>
                     } />
                 </div>

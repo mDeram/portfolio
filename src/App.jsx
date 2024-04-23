@@ -4,9 +4,8 @@ import { SiGithub, SiMaildotru } from "react-icons/si";
 // TODO animate when things appear
 // TODO make background static?
 // TODO superset defaults (like text selection)
-// TODO make it work on /portfolio using vite "page" setting
 
-function Project({ src, title, href, content }) {
+function Project({ src, alt, title, href, content }) {
     return (
         <div className="flex flex-col gap-16 border border-blue-800/50 rounded-2xl bg-purple-200/50">
             <div className="rounded-2xl p-8 flex flex-col gap-8 sm:gap-0 sm:flex-row text-neutral-900">
@@ -16,7 +15,7 @@ function Project({ src, title, href, content }) {
                         {content}
                     </div>
                 </div>
-                <img src={src} className="w-full sm:w-2/3 rounded-2xl magic-border aspect-video" />
+                <img src={src} alt={alt} className="w-full sm:w-2/3 rounded-2xl magic-border" />
             </div>
         </div>
     )
@@ -29,8 +28,8 @@ function App() {
             <h1 className="text-2xl text-neutral-900 font-medium tracking-tight">Deramecourt Mathurin</h1>
             <p className="text-neutral-500">Fullstack Engineer</p>
             <div className="flex gap-4 py-8">
-                <a href="https://github.com/mDeram" className="text-xl"><SiGithub /></a>
-                <a href="mailto:contact@mderam.com" className="text-xl"><SiMaildotru /></a>
+                <a href="https://github.com/mDeram" aria-label="My Github page" className="text-xl"><SiGithub /></a>
+                <a href="mailto:contact@mderam.com" aria-label="My contact email" className="text-xl"><SiMaildotru /></a>
             </div>
         </header>
         <main className="py-8">
@@ -75,13 +74,13 @@ function App() {
             <section className="mt-16">
                 <h2 className="text-xl text-neutral-900 font-medium mb-8 underline decoration-2 decoration-purple-500">Projects</h2>
                 <div className="flex flex-col gap-16">
-                    <Project title="Drive" src="./img/drive_index.png" href="https://github.com/mDeram/cloud-frontend" content={
+                    <Project title="Drive" src="/img/drive_index.png" alt="Homepage of the drive project I made." href="https://github.com/mDeram/cloud-frontend" content={
                         <p>Upload, store and download files from everywhere with an internet connection.</p>
                     } />
-                    <Project title="Multiplayer Sudoku" src="./img/sudoku.png" href="https://github.com/mDeram/sudoku-frontend" content={
+                    <Project title="Multiplayer Sudoku" src="/img/sudoku.png" alt="Sudoku game in the multiplayer sudoku website I made." href="https://github.com/mDeram/sudoku-frontend" content={
                         <p>Choose difficulty, share a link with one or more friends and as soon as they join the game start. You colaboratively solving a sudoku.</p>
                     } />
-                    <Project title="2D Map Editor" src="./img/2d_map_editor.png" href="https://github.com/mDeram/2DMapEditor" content={
+                    <Project title="2D Map Editor" src="/img/2d_map_editor.png" alt="Map building example with the 2D Map Editor I made. " href="https://github.com/mDeram/2DMapEditor" content={
                         <p>A simple map editor to help game developers with their map building.</p>
                     } />
                 </div>

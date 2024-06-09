@@ -78,7 +78,7 @@ function App() {
                         <p>Upload, store and download files from everywhere with an internet connection.</p>
                     } />
                     <Project title="Multiplayer Sudoku" src="/img/sudoku.png" alt="Sudoku game in the multiplayer sudoku website I made." href="https://github.com/mDeram/sudoku-frontend" content={
-                        <p>Choose difficulty, share a link with one or more friends and as soon as they join the game start. You colaboratively solving a sudoku.</p>
+                        <p>Choose difficulty, share a link with one or more friends and as soon as they join, the game starts. You colaboratively solving a sudoku.</p>
                     } />
                     <Project title="2D Map Editor" src="/img/2d_map_editor.png" alt="Map building example with the 2D Map Editor I made. " href="https://github.com/mDeram/2DMapEditor" content={
                         <p>A simple map editor to help game developers with their map building.</p>

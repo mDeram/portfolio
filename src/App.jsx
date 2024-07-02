@@ -5,6 +5,9 @@ import { PiArrowUpRightBold } from "react-icons/pi";
 // animate when things appear?
 
 function Project({ src, alt, title, githubHref, demoHref, content }) {
+    const openProjectText = "Open " + title;
+    const openGithubText = title + " on Github";
+
     return (
         <>
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-0 text-neutral-900">
@@ -15,10 +18,10 @@ function Project({ src, alt, title, githubHref, demoHref, content }) {
                         <h3 className="text-neutral-900 font-medium pl-1 text-lg pt-0.5">{title}</h3>
                     </div>
                     <div className="flex items-center gap-2">
-                        <a href={demoHref} target="_blank" className="w-full hover:shadow-xl group">
+                        <a href={demoHref} target="_blank" className="w-full group" title={openProjectText} aria-label={openProjectText}>
                             <PiArrowUpRightBold className="text-xl group-hover:-translate-y-px" />
                         </a>
-                        <a href={githubHref} target="_blank" className="w-full hover:shadow-xl group">
+                        <a href={githubHref} target="_blank" className="w-full group" title={openGithubText} aria-label={openGithubText}>
                             <SiGithub className="group-hover:-translate-y-px" />
                         </a>
                     </div>
@@ -27,7 +30,11 @@ function Project({ src, alt, title, githubHref, demoHref, content }) {
                     {content}
                 </div>
             </div>
-            <a href={demoHref} target="_blank"
+            <a
+                href={demoHref}
+                target="_blank"
+                title={openProjectText}
+                aria-label={openProjectText}
                 className="w-full flex-shrink h-min sm:w-1/2 rounded-2xl transition-all shadow-md hover:shadow-xl hover:scale-105 overflow-clip"
             >
                 <img src={src} alt={alt} />
@@ -44,10 +51,10 @@ function App() {
             <h1 className="text-4xl text-neutral-900 font-medium tracking-tight">Deramecourt Mathurin</h1>
             <p className="text-neutral-700 text-xl">Fullstack Engineer</p>
             <div className="flex gap-4 py-8">
-                <a href="https://github.com/mDeram" aria-label="My Github page" className="text-xl group">
+                <a href="https://github.com/mDeram" title="My Github" aria-label="My Github page" className="text-xl group">
                     <SiGithub className="group-hover:-translate-y-px" />
                 </a>
-                <a href="mailto:contact@mderam.com" aria-label="My contact email" className="text-xl group">
+                <a href="mailto:contact@mderam.com" title="My email" aria-label="My contact email" className="text-xl group">
                     <SiMaildotru className="group-hover:-translate-y-px" />
                 </a>
             </div>

@@ -11,7 +11,7 @@ function Project({ src, alt, title, githubHref, demoHref, content }) {
     return (
         <>
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-0 text-neutral-900">
-            <div className="w-full sm:w-1/2 mr-8">
+            <div className="w-full sm:w-1/2 sm:mr-8">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <div className="border-purple-500 rounded-full border-2 w-3 h-3" />
@@ -19,14 +19,14 @@ function Project({ src, alt, title, githubHref, demoHref, content }) {
                     </div>
                     <div className="flex items-center gap-2">
                         <a href={demoHref} target="_blank" className="w-full group" title={openProjectText} aria-label={openProjectText}>
-                            <PiArrowUpRightBold className="text-xl group-hover:-translate-y-px" />
+                            <PiArrowUpRightBold className="text-2xl sm:text-xl group-hover:-translate-y-px" />
                         </a>
                         <a href={githubHref} target="_blank" className="w-full group" title={openGithubText} aria-label={openGithubText}>
-                            <SiGithub className="group-hover:-translate-y-px" />
+                            <SiGithub className="text-xl sm:text-base group-hover:-translate-y-px" />
                         </a>
                     </div>
                 </div>
-                <div className="pl-9 mt-4 text-neutral-600">
+                <div className="ml-6 mr-6 sm:mr-0 mt-4 text-neutral-600">
                     {content}
                 </div>
             </div>
@@ -85,8 +85,8 @@ function App() {
                             <h3 className="text-neutral-900 font-medium pl-1 text-lg pt-0.5">Fullstack Engineer</h3>
                             <p className="border border-emerald-800/70 text-emerald-800/70 rounded-full px-1 pt-0.5 text-xs py-0 inline-block">PRESENT</p>
                         </div>
-                        <div className="pl-9 text-neutral-600">
-                            <p>DUALEAP - Connected aircrafts</p>
+                        <div className="mx-6 text-neutral-600">
+                            <p className="ml-3">DUALEAP - Connected aircrafts</p>
                             <p className="mt-4">
                                 {/*Nearly 2 years of fullstack development experience at DUALEAP resulted in building robust and user-friendly applications.*/}
                                 Nearly 2 years at DUALEAP honed my fullstack development skills while collaborating effectively within a small development team.
@@ -94,8 +94,8 @@ function App() {
                                 My backend expertise includes
                                         building scalable services (Node.js, Express.js, Redis),
                                         that interact seamlessly with databases (PostgreSQL, Sqlite3)
-                                        and implementing CI/CD pipelines (Jenkins, Docker, Terraform, GCP) for efficient reproducible and tested deployments.
-                                Alongside that, I crafted intuitive frontend experiences using React.js, Typescript, Tailwind CSS, and Next.js.
+                                        and implementing <span className="text-nowrap">CI/CD</span> pipelines (Jenkins, Docker, Terraform, GCP) for efficient reproducible and tested deployments.
+                                Alongside that, I crafted intuitive frontend experiences using React.js, Typescript, <span className="text-nowrap">Tailwind CSS</span>, and Next.js.
                             </p>
                         </div>
                     </li>

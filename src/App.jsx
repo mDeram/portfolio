@@ -105,7 +105,7 @@ function App() {
                 <h2 className="text-xl text-neutral-900 font-medium mb-4 underline decoration-2 decoration-purple-500">Projects</h2>
                 <div className="flex flex-col gap-16">
                     <Project
-                        title="Drive Cloud Storage"
+                        title="Drive Web Application"
                         src="/img/drive_index.png"
                         alt="Homepage of the drive project I made."
                         githubHref="https://github.com/mDeram/drive-frontend"

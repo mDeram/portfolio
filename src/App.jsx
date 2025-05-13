@@ -65,7 +65,7 @@ function App() {
                 <p className="text-neutral-600">
                     In 2015, my curiosity about computer automation led me to start creating web applications.
                     I later explored 2D game development and what I loved the most was building libraries and tools to improve DX.
-                    Fast-forward to today, I have built multiple applications, websites and APIs for myself, friends, and a startup.
+                    Fast-forward to today, I have built multiple applications, websites and APIs for a startup, students, friends and myself.
                 </p>
                 <p className="mt-4 text-neutral-600">
                     I thrive utilizing and developing my strong logical thinking to develop applications.
@@ -83,7 +83,7 @@ function App() {
                         <div className="flex items-center gap-2">
                             <div className="border-emerald-500 rounded-full border-2 w-3 h-3" />
                             <h3 className="text-neutral-900 font-medium pl-1 text-lg pt-0.5">Fullstack Engineer</h3>
-                            <p className="border border-emerald-800/70 text-emerald-800/70 rounded-full px-1 pt-0.5 text-xs py-0 inline-block">PRESENT</p>
+                            <p className="border border-emerald-800/70 text-emerald-800/70 rounded-full px-1 pt-0.5 text-xs py-0 inline-block">2022 – 2024</p>
                         </div>
                         <div className="mx-6 text-neutral-600">
                             <p className="ml-3">DUALEAP - Connected aircrafts</p>
